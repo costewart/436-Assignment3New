@@ -1,6 +1,14 @@
 .App {
-  text-align: center;
+  background-color: #3A405A;
 }
+
+h3 {
+  padding-top: 65px;
+  padding-bottom: 20px;
+  font-size: 50px;
+  color: white;
+}
+
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -17,6 +25,17 @@
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+}
+
+.container {
+  padding-top: 25px;
+ padding: 50px;
+}
+
+
+label {
+  color: white;
+  font-size: 25px;
 }
 
 .App-link {

@@ -5,16 +5,17 @@ import TodosList from './components/todos-list.component';
 import CreateTodo from './components/create-todo.component';
 import EditTodo from './components/edit-todo.component';
 import logo from "./logo.png";
+import './App.css';
 
 class App extends Component {
   render() {
     return (
       <Router> 
         
-        <div className="container">
+        <div className="App">
           
         <nav className="navbar navbar-expand-lg navbar-light bg-light">
-            <a className="navbar-brand" href="https://codingthesmartway.com" target="_blank">
+            <a className="navbar-brand" href="https://github.com/costewart/436-Assignment3New" target="_blank">
               <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
             </a>
             <Link to="/" className="navbar-brand">CPSC 436i: Assignment 3</Link>

@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
+import '../App.css';
 
 const Todo = props => (
     <tr>
         <td>{props.todo.todo_responsible}</td>
         <td>{props.todo.todo_description}</td>
         <td>
-            <Link to={"/edit/"+props.todo._id}>Edit</Link> 
+            <Link to={"/edit/"+props.todo._id}>Erase</Link> 
         </td>
     </tr>
 )
@@ -37,14 +38,14 @@ export default class TodosList extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h3>The Discussion Board</h3>
-                <table className="table table-striped" style={{ marginTop: 20}}>
-                    <thead>
+                <table className="table  table-hover table-light" style={{ marginTop: 20}}>
+                    <thead className="thead-dark">
                         <tr>
                             <th> Poster </th>
                             <th> Message </th>
-                            <th> Actions </th>
+                            <th> </th>
                         </tr>
                     </thead>
                     <tbody>

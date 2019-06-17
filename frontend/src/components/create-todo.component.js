@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import axios from 'axios';
+import '../App.css'
 
 export default class CreateTodo extends Component {
 
@@ -56,7 +57,7 @@ export default class CreateTodo extends Component {
 
     render() {
         return (
-            <div style={{marginTop: 20}}>
+            <div className="container">
                 <h3>Write New Message</h3>
                 <form onSubmit={this.onSubmit}>
                  
@@ -78,7 +79,7 @@ export default class CreateTodo extends Component {
                     </div>
                     
                     <div className="form-group">
-                        <input type="submit" value="Write Message" className="btn btn-primary" />
+                        <input type="submit" value="Write Message" className="btn btn-light" />
                     </div>
                 </form>
             </div>
