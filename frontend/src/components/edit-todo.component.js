@@ -80,7 +80,7 @@ export default class EditTodo extends Component {
                 <h3>Update Dish</h3>
                 <form onSubmit={this.onSubmit}>
                     <div className="form-group">
-                        <label>Chef: </label>
+                        <label>Dish: </label>
                         <input  type="text"
                                 className="form-control"
                                 value={this.state.todo_description}
@@ -88,7 +88,7 @@ export default class EditTodo extends Component {
                                 />
                     </div>
                     <div className="form-group">
-                        <label>Dish: </label>
+                        <label>Chef: </label>
                         <input  type="text"
                                 className="form-control"
                                 value={this.state.todo_responsible}
@@ -101,8 +101,8 @@ export default class EditTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityLow"
-                                    value="Low"
-                                    checked={this.state.todo_priority==='Low'}
+                                    value="Appetizer"
+                                    checked={this.state.todo_priority==='Appetizer'}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Appetizer</label>
@@ -112,8 +112,8 @@ export default class EditTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityMedium"
-                                    value="Medium"
-                                    checked={this.state.todo_priority==='Medium'}
+                                    value="Main"
+                                    checked={this.state.todo_priority==='Main'}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Main</label>
@@ -123,8 +123,8 @@ export default class EditTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityHigh"
-                                    value="High"
-                                    checked={this.state.todo_priority==='High'}
+                                    value="Dessert"
+                                    checked={this.state.todo_priority==='Dessert'}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Dessert</label>
@@ -144,7 +144,7 @@ export default class EditTodo extends Component {
                         </div>
                         <br/>
                         <div className="form-group">
-                            <input type="submit" value="Update Todo" className="btn btn-primary" />
+                            <input type="submit" value="Update Dish" className="btn btn-primary" />
                         </div>
                     </div>
                 </form>

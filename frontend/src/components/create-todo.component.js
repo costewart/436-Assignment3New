@@ -96,8 +96,8 @@ export default class CreateTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityLow"
-                                    value="Low"
-                                    checked={this.state.todo_priority==='Low'}
+                                    value="Appetizer"
+                                    checked={this.state.todo_priority==='Appetizer'}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Appetizer</label>
@@ -107,8 +107,8 @@ export default class CreateTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityMedium"
-                                    value="Medium"
-                                    checked={this.state.todo_priority==='Medium'}
+                                    value="Main"
+                                    checked={this.state.todo_priority==='Main'}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Main</label>
@@ -118,8 +118,8 @@ export default class CreateTodo extends Component {
                                     type="radio"
                                     name="priorityOptions"
                                     id="priorityHigh"
-                                    value="High"
-                                    checked={this.state.todo_priority==='High'}
+                                    value="Dessert"
+                                    checked={this.state.todo_priority==='Dessert'}
                                     onChange={this.onChangeTodoPriority}
                                     />
                             <label className="form-check-label">Dessert</label>

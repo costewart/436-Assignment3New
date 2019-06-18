@@ -5,7 +5,7 @@ import '../App.css';
 
 const Todo = props => (
     <tr>
-          <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_description}</td>
+        <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_description}</td>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
@@ -44,8 +44,8 @@ export default class TodosList extends Component {
                 <table className="table  table-hover table-light" style={{ marginTop: 20}}>
                     <thead className="thead">
                         <tr>
-                            <th> Chef </th>
                             <th> Dish </th>
+                            <th> Chef </th>
                             <th>Course</th>
                             <th> </th>
                         </tr>
