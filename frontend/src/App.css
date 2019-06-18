@@ -1,14 +1,32 @@
 .App {
-  background-color: #3A405A;
+  background-color: rgb(217, 227, 245);
 }
+
 
 h3 {
-  padding-top: 65px;
   padding-bottom: 20px;
   font-size: 50px;
-  color: white;
+  color: #3A405A;
 }
 
+.navbar{
+  font-size: 30px;
+  padding-left: 50px;
+  padding-right: 50px;
+  color: #F9DEC9;
+}
+
+.navheader {
+  font-size: 65px;
+  color: #685044;
+}
+
+.navlink {
+  font-size: 30px;
+  color: #685044;
+  padding: 10px;
+  padding-left: 15px;
+}
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
@@ -17,7 +35,7 @@ h3 {
 }
 
 .App-header {
-  background-color: #282c34;
+  background-color: #F9DEC9;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -28,25 +46,23 @@ h3 {
 }
 
 .container {
-  padding-top: 25px;
- padding: 50px;
+padding-top: 25px;
+padding: 30px;
 }
 
-
 label {
-  color: white;
+  color: #3A405A;
   font-size: 25px;
 }
 
-.App-link {
-  color: #61dafb;
+.thead {
+  color: #685044;
+  font-size: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tbody {
+  color: #685044;
+  font-size: 15px;
 }
+
+

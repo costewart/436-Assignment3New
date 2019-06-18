@@ -5,10 +5,11 @@ import '../App.css';
 
 const Todo = props => (
     <tr>
-        <td>{props.todo.todo_responsible}</td>
-        <td>{props.todo.todo_description}</td>
+          <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_description}</td>
+        <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
+        <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
-            <Link to={"/edit/"+props.todo._id}>Erase</Link> 
+            <Link to={"/edit/"+props.todo._id}>Edit</Link> 
         </td>
     </tr>
 )
@@ -39,16 +40,17 @@ export default class TodosList extends Component {
     render() {
         return (
             <div className="container">
-                <h3>The Discussion Board</h3>
+    
                 <table className="table  table-hover table-light" style={{ marginTop: 20}}>
-                    <thead className="thead-dark">
+                    <thead className="thead">
                         <tr>
-                            <th> Poster </th>
-                            <th> Message </th>
+                            <th> Chef </th>
+                            <th> Dish </th>
+                            <th>Course</th>
                             <th> </th>
                         </tr>
                     </thead>
-                    <tbody>
+                    <tbody className="tbody">
                         { this.todoList() }
                     </tbody>
                 </table>

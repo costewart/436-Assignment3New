@@ -14,18 +14,18 @@ class App extends Component {
         
         <div className="App">
           
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-lg navbar-light ">
             <a className="navbar-brand" href="https://github.com/costewart/436-Assignment3New" target="_blank">
-              <img src={logo} width="30" height="30" alt="CodingTheSmartWay.com" />
+              <img src={logo} width="85" height="100" alt="CodingTheSmartWay.com" />
             </a>
-            <Link to="/" className="navbar-brand">CPSC 436i: Assignment 3</Link>
+            <Link to="/" className="navheader">Who's Cooking?</Link>
             <div className="collpase nav-collapse">
               <ul className="navbar-nav mr-auto">
                 <li className="navbar-item">
-                  <Link to="/" className="nav-link">Discussion Board</Link>
+                  <Link to="/" className="navlink">Cooking Board</Link>
                 </li>
                 <li className="navbar-item">
-                  <Link to="/create" className="nav-link">Write Message</Link>
+                  <Link to="/create" className="navlink">Add Dish</Link>
                 </li>
               </ul>
             </div>
