@@ -2,6 +2,17 @@
   background-color: rgb(217, 227, 245);
 }
 
+button {
+  background-color: #F9DEC9;
+  border: none;
+  color: #685044;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
 
 h3 {
   padding-bottom: 20px;
@@ -13,10 +24,12 @@ h3 {
   font-size: 30px;
   padding-left: 50px;
   padding-right: 50px;
+  padding-top: 20px;
   color: #F9DEC9;
 }
 
 .navheader {
+  padding-top: 25px;
   font-size: 65px;
   color: #685044;
 }
@@ -29,8 +42,10 @@ h3 {
 }
 
 .container {
-padding-top: 25px;
-padding: 30px;
+padding-top: 5px;
+padding-right: 20px;
+padding-left: 20px;
+padding-bottom: 20px;
 }
 
 label {
@@ -45,7 +60,7 @@ label {
 
 .tbody {
   color: #685044;
-  font-size: 15px;
+  font-size: 18px;
 }
 
 

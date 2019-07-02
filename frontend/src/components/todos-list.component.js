@@ -4,15 +4,16 @@ import axios from 'axios';
 import '../App.css';
 import Delete from './delete';
 
+
 const Todo = props => (
     <tr>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_description}</td>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_responsible}</td>
         <td className={props.todo.todo_completed ? 'completed' : ''}>{props.todo.todo_priority}</td>
         <td>
-            <Link to={"/edit/"+props.todo._id}>Edit</Link> 
+            <button> <Link to={"/edit/"+props.todo._id}>Edit</Link> </button> 
         </td>
-        <td> <Delete id={props.todo.todo_id} todo={props.todo} /></td>
+        <td><button onClick={() => this.deleteTodo(props.todo._id)}> Delete </button></td>
     </tr>
 )
 
@@ -20,10 +21,16 @@ export default class TodosList extends Component {
 
     constructor(props) {
         super(props);
+        this.delete = new Delete();
         this.state = {todos: []};
+        this.deleteTodo = this.deleteTodo.bind(this);
     }
 
     componentDidMount() {
+        this.getTodoList();
+    }
+
+    getTodoList() {
         axios.get('http://localhost:4000/todos')
             .then(response => {
                 this.setState({todos: response.data});
@@ -32,7 +39,13 @@ export default class TodosList extends Component {
                 console.log(error);
             })
     }
-
+    
+    
+    deleteTodo(id) {
+        this.delete.deleteTodo(id);
+        this.getTodoList();
+    }
+    
     todoList() {
         return this.state.todos.map(function(currentTodo, i) {
             return <Todo todo={currentTodo} key={i} />;
@@ -50,11 +63,12 @@ export default class TodosList extends Component {
                             <th> Chef </th>
                             <th>Course</th>
                             <th> </th>
-                            <th> Delete </th>
+                            <th> </th>
                         </tr>
                     </thead>
                     <tbody className="tbody">
                         { this.todoList() }
+                        
                     </tbody>
                 </table>
             </div>
