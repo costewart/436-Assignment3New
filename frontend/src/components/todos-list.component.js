@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import '../App.css';
+import Delete from './delete';
 
 const Todo = props => (
     <tr>
@@ -11,6 +12,7 @@ const Todo = props => (
         <td>
             <Link to={"/edit/"+props.todo._id}>Edit</Link> 
         </td>
+        <td> <Delete id={props.todo.todo_id} todo={props.todo} /></td>
     </tr>
 )
 
@@ -48,6 +50,7 @@ export default class TodosList extends Component {
                             <th> Chef </th>
                             <th>Course</th>
                             <th> </th>
+                            <th> Delete </th>
                         </tr>
                     </thead>
                     <tbody className="tbody">
